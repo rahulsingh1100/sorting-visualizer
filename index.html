@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soting Visualizer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #141313;
+        }
+
+        div#array_container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+            height: 70vh;
+            color: white;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center text-success"><b>Sorting Visualizer</b></h1>
+        <p class="d-inline text-light">Size of array :</p>
+        <input id="a_size" type="range" min=10 max=50 step=1 value=15 onchange="func()">
+        <p class="d-inline text-light" style="margin-left:10px">Speed :</p>
+        <input id="a_speed" type="range" min=1 max=5 step=1 value=2 onchange="change()">
+        <button type="button"  class="btn btn-outline-primary mt-4" onclick="myfunction()" style="margin-left:300px">Bubble
+            Sort</button>
+        <button type="button" class="btn btn-outline-primary mt-4 mx-3" onclick="myselect()">Selection Sort</button>
+        <button type="button" class="btn btn-outline-primary mt-4" onclick=" merge()">Merge Sort</button>
+        <button type="button" class="btn btn-outline-primary mt-4 mx-3" onclick="quick()">Quick Sort</button>
+    </div>
+    <div class="container mt-3">
+        <div id="array_container">
+        </div>
+    </div>
+    <div class="container">
+        <table style="width: 100%;">
+            <tr>
+              <td style="color: white;"><b>Best Case</b></td>
+              <td style="color: white;"><b> AverageCase</b></td>
+              <td style="color: white;"><b>Worst Case</b></td>
+              <td style="color: white;"><b>Space Complexity</b></td>
+            </tr>
+            <tr>
+                <td  id="bc1" style="color: white;"></td>
+                <td  id="ac1" style="color: white;"></td>
+                <td  id="wc1" style="color: white;"></td>
+                <td  id="sc1" style="color: white;"></td>
+              </tr>
+          </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+        </script>
+    <script src="main.js"></script>
+    <script src="nav.js"></script>
+    <script src="Bubble.js"></script>
+    <script src="Selection.js"></script>
+    <script src="merge.js"></script>
+    <script src="quick.js"></script>
+</body>
+</html>
